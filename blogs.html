@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Articles – ProCoder09</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2f6df6;
+      --light: #f5f7fb;
+      --dark: #111827;
+      --gray: #6b7280;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+    body{background:var(--light);color:#111}
+    a{text-decoration:none;color:inherit}
+
+    /* ===== HEADER ===== */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .logo span { color: var(--primary); }
+
+    .menu {
+      display: flex;
+      gap: 22px;
+    }
+
+    .menu a {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* PAGE HEADER */
+    .page-head{background:#eaf1fb;padding:50px 20px}
+    .page-head h1{max-width:1100px;margin:auto;font-size:38px}
+    .page-head p{max-width:1100px;margin:10px auto 0;color:var(--gray)}
+
+    /* POSTS */
+    .container{max-width:1100px;margin:50px auto;padding:0 20px}
+    .post{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06);margin-bottom:40px}
+    .post img{width:100%;height:220px;object-fit:cover}
+    .post-content{padding:22px}
+    .meta{font-size:14px;color:var(--gray);margin-bottom:10px}
+    .meta span{margin-right:8px}
+    .post h2{font-size:28px;margin-bottom:12px}
+    .post p{color:var(--gray);margin-bottom:16px}
+    .read{color:var(--primary);font-weight:600}
+
+   /* ===== FOOTER ===== */
+    footer {
+      background: #1f2937;
+      color: #d1d5db;
+      padding: 50px 20px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    footer h4 {
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    footer a { display: block; margin-bottom: 8px; }
+
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+
+    @media(max-width:768px){.menu{display:none}.hamburger{display:block}}
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+  <header>
+    <div class="nav">
+      <div class="logo">Asfak<span>codes</span></div>
+      <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">Web Development</a>
+        <a href="#">About</a>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+
+<section class="page-head">
+  <h1>Blogs</h1>
+  <p>3 Results</p>
+</section>
+
+<section class="container">
+
+  <article class="post">
+    <img src="https://picsum.photos/800/500?11" alt="post">
+    <div class="post-content">
+      <div class="meta">HTML</div>
+      <h2>Introduction to HTML</h2>
+      <div class="meta">November 26, 2025 • Write a Comment</div>
+      <p>Learn how to use HTML and make a Web Pages Using HTML</p>
+      <a class="read" href="blogs/HTML/HTML.html">Read More →</a>
+    </div>
+  </article>
+
+  <article class="post">
+    <img src="https://picsum.photos/800/500?12" alt="post">
+    <div class="post-content">
+      <div class="meta">CSS</div>
+      <h2>Introduction to CSS</h2>
+      <div class="meta">November 27, 2025 • Write a Comment</div>
+      <p>Learn how to build websites using HTML,CSS & How to Design a web pages using css</p>
+      <a class="read" href="blogs/CSS/CSS.html">Read More →</a>
+    </div>
+  </article>
+
+  <article class="post">
+    <img src="https://picsum.photos/800/500?12" alt="post">
+    <div class="post-content">
+      <div class="meta">JavaScript</div>
+      <h2>Introduction to JavaScript</h2>
+      <div class="meta">November 27, 2025 • Write a Comment</div>
+      <p>Learn how to use JavaScript. JavaScript can make your websites Alive.</p>
+      <a class="read" href="blogs/JavaScript/JavaScript.html">Read More →</a>
+    </div>
+  </article>
+
+</section>
+
+ <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4>Asfak</h4>
+        <p>YouTube channel sharing real‑world web development tutorials.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="#">YouTube</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+    <div class="copyright">© 2025 Asfak</div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+      menu.style.flexDirection = 'column';
+      menu.style.background = '#fff';
+      menu.style.position = 'absolute';
+      menu.style.top = '60px';
+      menu.style.right = '20px';
+      menu.style.padding = '20px';
+      menu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+    }
+  </script>
+
+</body>
+</html>
